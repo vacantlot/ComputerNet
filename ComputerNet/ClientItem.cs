@@ -25,7 +25,7 @@ namespace ComputerNet
             thread.Start(); //线程开始工作
         }
 
-        void Run()
+        void Run()//执行接受数据
         {
             try
             {
@@ -44,7 +44,7 @@ namespace ComputerNet
             catch { }
         }
 
-        public void Send(string smg)
+        public void Send(string smg)//执行发送数据
         {
             Byte[] bytes=Encoding.Unicode.GetBytes(smg);
             client.Send(bytes);

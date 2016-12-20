@@ -54,7 +54,7 @@ namespace ComputerNet
 
         }
 
-        public void Receive(ClientItem ci, string msg)
+        public void Receive(ClientItem ci, string msg)//接收消息
         {
             string[] temp = msg.Split(new char[] { '|' });//调用字符串的Split方法，分离出
             //用“|”分隔的多个字符串，保存到字符串数组temp中。
@@ -68,7 +68,7 @@ namespace ComputerNet
             }
         }
 
-        private void login(ClientItem ci, string msg)
+        private void login(ClientItem ci, string msg)//登录
         {
             string[] temp = msg.Split(new char[] { '|' });
             string ssend = "conn|" + temp[1];

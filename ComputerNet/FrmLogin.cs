@@ -14,13 +14,13 @@ namespace ClintNet
     {
         public string ip; //运行时获取IP地址
         public string name; //运行时获取用户名
-        public int Ports;
+        public int Ports;//运行时获取端口号
         public FrmLogin()
         {
             InitializeComponent();
         }
 
-        private void button1_Click(object sender, System.EventArgs e)
+        private void button1_Click(object sender, System.EventArgs e)//连接按钮点击事件
         {
             if (this.textBox1.Text == "") return;
             if (this.textBox2.Text == "") return;

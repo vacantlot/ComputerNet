@@ -31,9 +31,7 @@ namespace ComputerNet
         public void f()
         {
             try
-            {
-
-            
+            {           
             IPHostEntry ipinfo = Dns.Resolve(Dns.GetHostName());
             //Dns的方法GetHostName()获取本地主机名
             //Resolve()方法由主机名或IP地址得到主机IP列表(IPHostEntry)对象ipinfo
@@ -69,7 +67,7 @@ namespace ComputerNet
             textBox2.Text=str2;           
         }
 
-        private void Form1_Load(object sender, EventArgs e)
+        private void Form1_Load(object sender, EventArgs e)//窗体加载事件
         {
             th = new Thread(new ThreadStart(f));
             //利用方法f创建接收进程
@@ -78,7 +76,7 @@ namespace ComputerNet
 
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void button1_Click(object sender, EventArgs e)//消息发送按钮事件
         {
             if (textBox4.Text.Trim()!="")
         {
